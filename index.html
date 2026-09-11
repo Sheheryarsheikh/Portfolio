@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau Project Portfolio</title>
+    <title>Emergency Room Analytics Dashboard | Portfolio</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -19,9 +19,9 @@
         .portfolio-container {
             background-color: #ffffff;
             width: 100%;
-            max-width: 900px;
+            max-width: 950px;
             margin: 20px;
-            padding: 30px;
+            padding: 35px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             box-sizing: border-box;
@@ -29,10 +29,43 @@
 
         .project-title {
             color: #1a202c;
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             text-align: center;
+        }
+
+        .project-subtitle {
+            color: #718096;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        /* Features Bullet Box */
+        .dashboard-specs {
+            background-color: #f1f5f9;
+            border-left: 4px solid #1f77b4;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .dashboard-specs h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            color: #1e293b;
+        }
+
+        .dashboard-specs ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #475569;
+            font-size: 0.95rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 5px;
         }
 
         .screenshot-wrapper {
@@ -41,6 +74,7 @@
             border-radius: 8px;
             overflow: hidden;
             margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .screenshot-img {
@@ -74,14 +108,17 @@
             transform: scale(0.98);
         }
 
-        /* Mobile specific spacing adjustments */
+        /* Mobile Adjustments */
         @media (max-width: 600px) {
             .portfolio-container {
                 padding: 20px;
                 margin: 10px;
             }
             .project-title {
-                font-size: 1.6rem;
+                font-size: 1.75rem;
+            }
+            .dashboard-specs ul {
+                grid-template-columns: 1fr;
             }
             .download-btn {
                 font-size: 1rem;
@@ -94,37 +131,36 @@
 
     <div class="portfolio-container">
         
-        <!-- 1. Project Title -->
-        <h1 class="project-title">Tableau Dashboard Project</h1>
+        <!-- 1. Customized Dashboard Title -->
+        <h1 class="project-title">Emergency Room (ED) Performance Dashboard</h1>
+        <div class="project-subtitle">Healthcare Analytics & Operations Visualization</div>
 
-        <!-- 2. Your PNG Dashboard Screenshot -->
+        <!-- Dashboard Breakdown Details -->
+        <div class="dashboard-specs">
+            <h3>📊 Included Metrics & Key Visualizations:</h3>
+            <ul>
+                <li>⚡ Average Patient Wait Time Metrics</li>
+                <li>⭐ Average Patient Satisfaction Scores</li>
+                <li>👥 Patient Volume by Age in the ED</li>
+                <li>📈 Patient Volume Trends (Area Chart)</li>
+                <li>🗺️ Wait Time Bottlenecks (Heat Map)</li>
+                <li>📊 Demographic Breakdown (Race Bar Charts)</li>
+                <li>🏥 Department Referral Analysis</li>
+            </ul>
+        </div>
+
+        <!-- 2. Your PNG Emergency Room Dashboard Screenshot -->
         <div class="screenshot-wrapper">
-            <img src="img.png" alt="Tableau Dashboard Visual Preview" class="screenshot-img">
+            <img src="img.png" alt="Emergency Room Tableau Dashboard Preview" class="screenshot-img">
         </div>
 
         <!-- 3. Responsive Blue Download Button -->
-        <!-- Update the href to point to your exact file location -->
+        <!-- Change 'er_dashboard.twbx' if your file name is different -->
         <a href="Book2.twbx" download class="download-btn">
             📥 Download Raw .TWBX File (Tableau Packaged Workbook)
         </a>
 
     </div>
- <div class="portfolio-container">
-        
-        <!-- 1. Project Title -->
-        <h1 class="project-title">Tableau Dashboard Project</h1>
 
-        <!-- 2. Your PNG Dashboard Screenshot -->
-        <div class="screenshot-wrapper">
-            <img src="img.png" alt="Tableau Dashboard Visual Preview" class="screenshot-img">
-        </div>
-
-        <!-- 3. Responsive Blue Download Button -->
-        <!-- Update the href to point to your exact file location -->
-        <a href="Book2.twbx" download class="download-btn">
-            📥 Download Raw .TWBX File (Tableau Packaged Workbook)
-        </a>
-
-    </div>
 </body>
 </html>
